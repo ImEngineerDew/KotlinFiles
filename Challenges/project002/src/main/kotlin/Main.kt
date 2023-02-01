@@ -1,6 +1,6 @@
 import java.util.Scanner
 
-fun main() {cd
+fun main() {
 
     val obj = Scanner(System.`in`)
 
