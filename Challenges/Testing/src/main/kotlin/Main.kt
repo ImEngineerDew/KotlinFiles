@@ -7,7 +7,7 @@ fun sumAplusB (a:Int, b: Int): Int
 
 fun main(args: Array<String>)
 {
-    val obj_var = Scanner (System.`in`);
+        val obj_var = Scanner (System.`in`);
 
     print("Write your value of A: ");
     val valA = obj_var.nextInt();
