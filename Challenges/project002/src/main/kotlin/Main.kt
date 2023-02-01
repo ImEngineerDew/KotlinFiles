@@ -14,7 +14,7 @@ fun main(args: Array<String>) {
     for (i in values.indices)
     {
         print("Write the numbers to add: ")
-        values = arrayOf(obj.nextInt())
+        values[i] = obj.nextInt()
         result+= values[i]!!
     }
     print(result)
