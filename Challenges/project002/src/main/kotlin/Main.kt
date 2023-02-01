@@ -1,14 +1,14 @@
 import java.util.*
 import java.lang.*
 
-fun main(args: Array<String>) {
+fun main() {
 
     val obj = Scanner (System.`in`)
 
     print("Write the length of Array: ")
-    var length = obj.nextInt()
+    val length = obj.nextInt()
 
-    var values = arrayOfNulls<Int>(length)
+    val values = arrayOfNulls<Int>(length)
     var result = 0
 
     for (i in values.indices)
