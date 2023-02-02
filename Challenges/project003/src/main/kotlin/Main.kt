@@ -14,11 +14,14 @@ fun main() {
     val sumB = arrayOfNulls<Int>(length)
 
     /**Java equivalent to Integer sumC[] = new Integer["length"]**/
-    val sumC = arrayOfNulls<Int>(length)
+    val resu = arrayOfNulls<Int>(length)
 
     for (i in sumA.indices) {
-
+        print("Write the values of A: ")
         sumA[i] = entrance.nextInt()
+
+        print("Write the values of B: ")
         sumB[i] = entrance.nextInt()
     }
+    
 }
