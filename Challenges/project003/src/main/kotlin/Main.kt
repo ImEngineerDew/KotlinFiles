@@ -25,7 +25,7 @@ fun main() {
     }
     for (j in resu.indices) {
         resu[j] = sumA[j]!! + sumB[j]!!
-        print(" "+resu[j]!!)
+        print(" " + resu[j]!!)
     }
 }
 
