@@ -24,7 +24,7 @@ fun main() {
         sumB[i] = entrance.nextInt()
     }
     for (j in resu.indices) {
-        resu[j] = sumA[j]!! + sumB[j]!!
+        resu[j] = sumA[j]!!.plus(sumB[j]!!)
         print(" " + resu[j]!!)
     }
 }
