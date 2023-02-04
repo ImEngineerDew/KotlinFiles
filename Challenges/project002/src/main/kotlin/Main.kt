@@ -16,5 +16,5 @@ fun main() {
         //result += values[i]!!
         result = result.plus(values[i]!!) /**An operator plus has been assigned**/
     }
-    print(result)
+    print("Result of the sum of this array: $result")
 }
