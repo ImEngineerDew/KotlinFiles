@@ -1,4 +1,4 @@
-import java.util.Scanner
+import java.util.*
 
 fun main() {
 
@@ -10,7 +10,11 @@ fun main() {
 
     val numArray = arrayOfNulls<Int>(size)
 
-    print("Write the numbers: ")
-    val numbers = entrance.nextInt()
+    for(index in numArray.indices) {
+        print("Write the numbers: ")
+        val numbers = entrance.nextInt()
 
+        numArray[index] = numbers
+    }
+    print(Arrays.toString(numArray))
 }
