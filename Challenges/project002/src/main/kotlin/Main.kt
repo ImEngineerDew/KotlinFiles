@@ -13,7 +13,8 @@ fun main() {
     for (i in values.indices) {
         print("Write the numbers to add: ")
         values[i] = obj.nextInt()
-        result += values[i]!!
+        //result += values[i]!!
+        result = result.plus(values[i]!!) /**An operator plus has been assigned**/
     }
     print(result)
 }
