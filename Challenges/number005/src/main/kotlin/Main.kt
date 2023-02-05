@@ -26,4 +26,9 @@ fun main() {
         arrayC[index] = input.nextInt()
     }
     println(" ")
+    println("Values of A: "+Arrays.toString(arrayA))
+    println("Values of B: "+Arrays.toString(arrayB))
+    println("Values of C: "+Arrays.toString(arrayC))
+    println("")
+    println("Numbers compared: ")
 }
