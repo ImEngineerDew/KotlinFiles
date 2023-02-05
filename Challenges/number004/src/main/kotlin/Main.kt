@@ -1,4 +1,4 @@
-import java.util.Scanner
+import java.util.*
 
 fun main(args: Array<String>) {
 
@@ -14,9 +14,19 @@ fun main(args: Array<String>) {
     for(index in arrayA.indices) {
         print("Write the numbers of arrayA: ")
         arrayA[index]= input.nextInt()
-
     }
-
+    for(index in arrayB.indices) {
+        print("Write the numbers of arrayB: ")
+        arrayB[index] = input.nextInt()
+    }
+    for(index in arrayC.indices)
+    {
+        print("Write the numbers of arrayC: ")
+        arrayC[index] = input.nextInt()
+    }
+    println("Numbers of array A: "+Arrays.toString(arrayA))
+    println("Numbers of array B: "+Arrays.toString(arrayB))
+    println("Numbers of array C: "+Arrays.toString(arrayC))
 
 
 }
