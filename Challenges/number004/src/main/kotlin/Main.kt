@@ -22,9 +22,9 @@ fun main() {
         print("Write the numbers of arrayB: ")
         arrayB[index] = input.nextInt()
 
-        if (arrayA[index]!!.compareTo(arrayB[index]!!) < 0) {
+        if (arrayA[index]!! < arrayB[index]!!) {
             arrayComp[index] = arrayA[index]!!
-        } else if (arrayA[index]!!.compareTo(arrayB[index]!!) > 0) {
+        } else if (arrayA[index]!! > arrayB[index]!!) {
             arrayComp[index] = arrayB[index]!!
         }
     }
