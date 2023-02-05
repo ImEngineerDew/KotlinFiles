@@ -15,12 +15,12 @@ fun main() {
         print("Write the numbers of arrayA: ")
         arrayA[index] = input.nextInt()
     }
-    print(" ")
+    println(" ")
     for (index in arrayB.indices) {
         print("Write the numbers of arrayB: ")
         arrayB[index] = input.nextInt()
     }
-    print(" ")
+    println(" ")
     for (index in arrayC.indices) {
         print("Write the numbers of arrayC: ")
         arrayC[index] = input.nextInt()
