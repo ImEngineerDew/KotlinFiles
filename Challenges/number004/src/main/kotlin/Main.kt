@@ -9,6 +9,6 @@ fun main(args: Array<String>) {
     val arrayB = arrayOfNulls<Int>(sizeArray)
     val arrayC = arrayOfNulls<Int>(sizeArray)
 
-    
+
 
 }
