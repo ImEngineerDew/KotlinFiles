@@ -7,6 +7,7 @@ fun main() {
     print("Write the size of array: ")
     val sizeArray = input.nextInt()
 
+    println(" ")
     val arrayA = arrayOfNulls<Int>(sizeArray)
     val arrayB = arrayOfNulls<Int>(sizeArray)
     val arrayC = arrayOfNulls<Int>(sizeArray)
@@ -25,6 +26,7 @@ fun main() {
         print("Write the numbers of arrayC: ")
         arrayC[index] = input.nextInt()
     }
+    println(" ")
     println("Numbers of array A: " + Arrays.toString(arrayA))
     println("Numbers of array B: " + Arrays.toString(arrayB))
     println("Numbers of array C: " + Arrays.toString(arrayC))
