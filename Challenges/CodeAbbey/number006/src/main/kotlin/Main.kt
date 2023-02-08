@@ -1,4 +1,3 @@
-import java.util.Arrays
 import java.util.Scanner
 
 fun divisorOperation(a: Int, b: Int): Double {
@@ -16,6 +15,9 @@ fun main() {
     val vectorDiv = arrayOfNulls<Double>(size)
     val rounded = arrayOfNulls<Long>(size)
 
+    val div = StringBuffer()
+    val round = StringBuffer()
+
     for (index in vectorA.indices) {
         print("Write the values of vector A: ")
         vectorA[index] = obj.nextInt()
@@ -24,10 +26,18 @@ fun main() {
         print("Write the values of vector B: ")
         vectorB[index] = obj.nextInt()
     }
-    for(index in vectorDiv.indices) {
-        vectorDiv[index] = divisorOperation(vectorA[index]!!,vectorB[index]!!)
+    for (index in vectorDiv.indices) {
+        vectorDiv[index] = divisorOperation(vectorA[index]!!, vectorB[index]!!)
         rounded[index] = Math.round(vectorDiv[index]!!)
     }
-    println("Result: "+ Arrays.toString(vectorDiv))
-    println("Rounded result :"+ Arrays.toString(rounded))
+
+    /**Convert the arary to String**/
+    for (index in rounded.indices) {
+        round.append(rounded[index]).append(" ")
+    }
+    for (index in vectorDiv.indices) {
+        div.append(vectorDiv[index]).append(" ")
+    }
+    println("Result: $div")
+    println("Rounded result: $round")
 }
