@@ -15,9 +15,21 @@ fun main() {
     val celsiusVec = arrayOfNulls<Double>(size)
     val celsiusRou = arrayOfNulls<Long>(size)
 
-    for(index in fahrenheitVec.indices) {
-        println("Write the temperatures in *F: ")
+    val fahr = StringBuilder()
+    val celR = StringBuilder()
+
+    for (index in fahrenheitVec.indices) {
+        print("Write the temperatures in *F: ")
         fahrenheitVec[index] = obj.nextDouble()
         celsiusVec[index] = temperatureConversion(fahrenheitVec[index]!!)
+        celsiusRou[index] = Math.round(celsiusVec[index]!!)
     }
+    for (index in fahrenheitVec.indices) {
+        fahr.append(fahrenheitVec[index]).append(" ")
+    }
+    for (index in celsiusRou.indices) {
+        celR.append(celsiusRou[index]).append(" ")
+    }
+    println(fahr)
+    println(celR)
 }
