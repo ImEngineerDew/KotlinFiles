@@ -6,5 +6,18 @@ fun temperatureConversion(fahrenheit: Double): Double {
 }
 
 fun main() {
+    val obj = Scanner(System.`in`)
 
+    print("Write the size of array: ")
+    val size = obj.nextInt()
+
+    val fahrenheitVec = arrayOfNulls<Double>(size)
+    val celsiusVec = arrayOfNulls<Double>(size)
+    val celsiusRou = arrayOfNulls<Long>(size)
+
+    for(index in fahrenheitVec.indices) {
+        println("Write the temperatures in *F: ")
+        fahrenheitVec[index] = obj.nextDouble()
+        celsiusVec[index] = temperatureConversion(fahrenheitVec[index]!!)
+    }
 }
