@@ -1,7 +1,5 @@
 import java.util.Scanner
-
-fun main(args: Array<String>) {
-
+fun main() {
     val obj = Scanner(System.`in`)
     val valueArr = obj.nextInt()
 
