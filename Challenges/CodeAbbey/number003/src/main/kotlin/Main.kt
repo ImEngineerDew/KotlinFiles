@@ -6,7 +6,7 @@ fun writeArray(sumArray: Array<Int?>, index:Int, entrance:Scanner)
     {
         return
     }
-        print("Write the elements of Array: ")
+        print("Write the elements of the array: ")
         sumArray[index] = entrance.nextInt()
         writeArray(sumArray,index+1,entrance)
 }
@@ -35,6 +35,20 @@ fun main() {
     /**Java equivalent to Integer sumB[] = new Integer["length"]**/
     val sumB = arrayOfNulls<Int>(tam)
 
+    readArray(sumA,0)
+    readArray(sumB,0)
+
+    writeArray(sumA,0,entrance)
+    writeArray(sumB,0, entrance)
+
+
+    /*
+    /**Java equivalent to Integer sumA[] = new Integer["length"]**/
+    val sumA = arrayOfNulls<Int>(tam)
+
+    /**Java equivalent to Integer sumB[] = new Integer["length"]**/
+    val sumB = arrayOfNulls<Int>(tam)
+
     /**Java equivalent to Integer sumC[] = new Integer["length"]**/
     val resu = arrayOfNulls<Int>(tam)
 
@@ -49,6 +63,7 @@ fun main() {
         resu[j] = sumA[j]!!.plus(sumB[j]!!)
         print(" " + resu[j]!!)
     }
+     */
 }
 
 
