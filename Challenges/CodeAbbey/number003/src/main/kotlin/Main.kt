@@ -1,5 +1,27 @@
 import java.util.Scanner
 
+fun writeArray(sumArray: Array<Int?>, index:Int, entrance:Scanner)
+{
+    if(index.equals(sumArray.indices))
+    {
+        return
+    }
+        print("Write the elements of Array: ")
+        sumArray[index] = entrance.nextInt()
+        writeArray(sumArray,index+1,entrance)
+}
+
+fun readArray(array:Array<Int?>,index:Int)
+{
+    if(index.equals(array.indices-1))
+    {
+        return
+    }
+    else
+    {
+        readArray(array,index+1)
+    }
+}
 fun main() {
 
     val entrance = Scanner(System.`in`)
