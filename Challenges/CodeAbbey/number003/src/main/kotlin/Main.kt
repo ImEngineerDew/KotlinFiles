@@ -1,54 +1,51 @@
-import java.util.Scanner
+import java.util.*
 
 object Main {
-    fun writeArray(sumArray: Array<Int?>, index: Int, `entrance`: Scanner) {
-        if (index == sumArray.size) {
-            return
-        }
-        //print("Write the elements of the array: ")
-        sumArray[index] = `entrance`.nextInt()
-        writeArray(sumArray, index + 1, `entrance`)
-    }
-
-    fun readArray(array: Array<Int?>, index: Int) {
-        if (index == array.size - 1) {
-            //This is an empty  issue
-        } else {
-            readArray(array, index + 1)
-        }
-    }
-
-    fun resultSum(vectorA: Array<Int?>, vectorB: Array<Int?>, index: Int) {
-        if (index == vectorA.size || index == vectorB.size) {
-            return
-        }
-        val res = vectorA[index]!! + vectorB[index]!!
-        print("$res ")
-        resultSum(vectorA, vectorB, index + 1)
-    }
-
     @JvmStatic
     fun main(args: Array<String>) {
 
-        val `entrance` = Scanner(System.`in`)
+        val `object` = Scanner(System.`in`)
+        val pos = 0
 
-        print("Write the size of array: ")
-        val tam = `entrance`.nextInt()
+        val size = `object`.nextInt()
 
-        val index = 0
+        /** Define the array and its size  */
+        val vectorA = arrayOfNulls<Int>(size)
+        val vectorB = arrayOfNulls<Int>(size)
 
-        /**Java equivalent to Integer sumA[] = new Integer["length"]**/
-        val sumA = arrayOfNulls<Int>(tam)
+        /** read the arrays with Scanner object  */
+        readArray(vectorA, vectorB, pos, `object`)
 
-        /**Java equivalent to Integer sumB[] = new Integer["length"]**/
-        val sumB = arrayOfNulls<Int>(sumA.size)
+        /** Print the sums of both arrays  */
+        resultSum(vectorA, vectorB, pos)
+    }
 
-        readArray(sumA, 0)
-        readArray(sumB, 0)
+    fun showArray(vectorA: Array<Int>, vectorB: Array<Int>, i: Int) {
+        if (i == vectorA.size - 1 || i == vectorB.size - 1) {
+            print(vectorA[i].toString() + " ")
+            print(vectorB[i].toString() + " ")
+        } else {
+            print(vectorA[i].toString() + " ")
+            print(vectorB[i].toString() + " ")
+            showArray(vectorA, vectorB, i + 1)
+        }
+    }
 
-        writeArray(sumA, 0, `entrance`)
-        writeArray(sumB, 0, `entrance`)
+    fun resultSum(vectorA: Array<Int?>, vectorB: Array<Int?>, i: Int) {
+        if (i == vectorA.size || i == vectorB.size) {
+            return
+        }
+        val res = vectorA[i]!! + vectorB[i]!!
+        print("$res ")
+        resultSum(vectorA, vectorB, i + 1)
+    }
 
-        resultSum(sumA, sumB, index)
+    fun readArray(vectorA: Array<Int?>, vectorB: Array<Int?>, i: Int, `object`: Scanner) {
+        if (i == vectorA.size || i == vectorB.size) {
+            return
+        }
+        vectorA[i] = `object`.nextInt()
+        vectorB[i] = `object`.nextInt()
+        readArray(vectorA, vectorB, i + 1, `object`)
     }
 }
