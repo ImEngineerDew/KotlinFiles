@@ -2,7 +2,7 @@ import java.util.Scanner
 
 val `object` = Scanner(System.`in`)
 
-fun main(args: Array<String>) {
+fun main() {
 
     val pos = 0
     val size = `object`.nextInt()
