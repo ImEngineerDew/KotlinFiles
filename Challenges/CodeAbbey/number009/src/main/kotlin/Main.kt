@@ -1,6 +1,6 @@
 import java.util.Scanner
 
-fun main(args: Array<String>) {
+fun main() {
   val element = Scanner(System.`in`)
   println("Write the size of your array: ")
 
