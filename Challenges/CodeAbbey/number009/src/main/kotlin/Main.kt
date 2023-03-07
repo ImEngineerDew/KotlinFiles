@@ -2,9 +2,8 @@ import java.util.Scanner
 
 fun main() {
   val element = Scanner(System.`in`)
-  println("Write the size of your array: ")
-
   val size = element.nextInt()
+
   val i = 0
 
   val sideA = arrayOfNulls<Long>(size)
@@ -19,12 +18,10 @@ fun triRd(A: Array<Long?>, B: Array<Long?>, C: Array<Long?>, sc: Scanner, i: Int
   if (i == A.size || i == B.size || i == C.size) {
     return
   }
-  print("Write the length of side A: ")
   A[i] = sc.nextLong()
-  print("Write the length of side B: ")
   B[i] = sc.nextLong()
-  print("Write the length of side C ")
   C[i] = sc.nextLong()
+
   triRd(A, B, C, sc, i + 1)
 }
 
