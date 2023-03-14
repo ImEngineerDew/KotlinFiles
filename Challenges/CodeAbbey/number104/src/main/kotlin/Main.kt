@@ -11,14 +11,16 @@ fun main() {
   val result = arrayOfNulls<Double>(sizeArr)
   val vector = arrayOfNulls<Double>(6)
   /** This line code must print the result  */
-  resultTriangle(result, vector, index)
+  result(result, vector, obj, index)
 }
 
-fun resultTriangle(res: Array<Double?>, vec: Array<Double?>, index: Int) {
+fun result(res: Array<Double?>, vec: Array<Double?>, sc: Scanner, index: Int) {
   /** Check if the index is equals to length of our array result[]  */
-  if (!index.equals(res.size) and index.equals(vec.size)) {
+  if (index != res.size && index != vec.size) {
+    readVector(vec, sc, 0)
+    res[index] = calculateArea(vec)
     println("%.1f".format(res[index]!!))
-    resultTriangle(res, vec, index + 1)
+    result(res, vec, sc, index + 1)
   }
 }
 
