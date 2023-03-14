@@ -9,17 +9,16 @@ fun main() {
   val sizeArr = obj.nextDouble()
   val result = arrayOfNulls<Double>(sizeArr.toInt())
   val vector = arrayOfNulls<Double>(6)
-
+  /** This line code must calculate the triangle area **/
   calculate(result, vector, obj)
   /** This line code must print the result  */
   result(result, vector, obj, 0)
 }
 
 fun calculate(res: Array<Double?>, vec: Array<Double?>, sc: Scanner) {
-  /** This line code call the method readVector and invokes calculateArea to reading this vector  */
   for (i in res.indices) {
-    readVector(vec, sc, 0)
-    res[i] = calculateArea(vec)
+    readVector(vec, sc, 0)    /** Call this recursive method **/
+    res[i] = calculateArea(vec)     /** Store the calculateArea on res[i] **/
   }
 }
 
