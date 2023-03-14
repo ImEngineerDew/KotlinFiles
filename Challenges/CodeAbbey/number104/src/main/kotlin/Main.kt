@@ -10,12 +10,12 @@ fun main() {
   val result = arrayOfNulls<Double>(sizeArr.toInt())
   val vector = arrayOfNulls<Double>(6)
 
-  calculate(result, vector, obj, 0)
+  calculate(result, vector, obj)
   /** This line code must print the result  */
   result(result, vector, obj, 0)
 }
 
-fun calculate(res: Array<Double?>, vec: Array<Double?>, sc: Scanner, i: Int) {
+fun calculate(res: Array<Double?>, vec: Array<Double?>, sc: Scanner) {
   /** This line code call the method readVector and invokes calculateArea to reading this vector  */
   for (i in res.indices) {
     readVector(vec, sc, 0)
