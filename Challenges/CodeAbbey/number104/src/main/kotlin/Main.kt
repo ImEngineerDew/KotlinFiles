@@ -6,19 +6,26 @@ import java.util.*
 
 fun main() {
   val obj = Scanner(System.`in`)
-  val sizeArr = obj.nextInt()
-  val index = 0
-  val result = arrayOfNulls<Double>(sizeArr)
+  val sizeArr = obj.nextDouble()
+  val result = arrayOfNulls<Double>(sizeArr.toInt())
   val vector = arrayOfNulls<Double>(6)
+
+  calculate(result, vector, obj, 0)
   /** This line code must print the result  */
-  result(result, vector, obj, index)
+  result(result, vector, obj, 0)
+}
+
+fun calculate(res: Array<Double?>, vec: Array<Double?>, sc: Scanner, i: Int) {
+  /** This line code call the method readVector and invokes calculateArea to reading this vector  */
+  for (i in res.indices) {
+    readVector(vec, sc, 0)
+    res[i] = calculateArea(vec)
+  }
 }
 
 fun result(res: Array<Double?>, vec: Array<Double?>, sc: Scanner, index: Int) {
   /** Check if the index is equals to length of our array result[]  */
-  if (index != res.size && index != vec.size) {
-    readVector(vec, sc, 0)
-    res[index] = calculateArea(vec)
+  if (index != res.size) {
     println("%.1f".format(res[index]!!))
     result(res, vec, sc, index + 1)
   }
