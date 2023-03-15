@@ -2,7 +2,7 @@
 $ kotlinc imengineerdew.kt -include-runtime -d imengineerdew.jar
 */
 
-import java.util.*
+import java.util.Scanner
 
 fun main() {
   val obj = Scanner(System.`in`)
@@ -42,10 +42,7 @@ fun readVector(vector: Array<Double?>, sc: Scanner, index: Int) {
 /** This method must return the value of triangle area **/
 fun calculateArea(vector: Array<Double?>): Double {
   return 0.5 * Math.abs(
-    (vector[0]!! * vector[3]!!) +
-            (vector[2]!! * vector[5]!!) + (vector[4]!! * vector[1]!!) -
-            (vector[2]!! * vector[1]!!) - (vector[4]!! * vector[3]!!) -
-            (vector[0]!! * vector[5]!!)
+    (vector[0]!! * vector[3]!!) + (vector[2]!! * vector[5]!!) + (vector[4]!! * vector[1]!!) - (vector[2]!! * vector[1]!!) - (vector[4]!! * vector[3]!!) - (vector[0]!! * vector[5]!!)
   )
 }
 
