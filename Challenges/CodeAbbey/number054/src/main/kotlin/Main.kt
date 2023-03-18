@@ -4,8 +4,13 @@ $ kotlinc imengineerdew.kt -include-runtime -d imengineerdew.jar
 
 import java.util.Scanner
 
-fun main(args: Array<String>) {
+fun main() {
+  val `object` = Scanner(System.`in`)
+  val size = `object`.nextInt()
+  val pythagoras = arrayOfNulls<Double>(size)
 
+  readVector(pythagoras, `object`, 0)
+  showResult(pythagoras, 0)
 }
 
 fun readVector(vec: Array<Double?>, sc: Scanner, index: Int) {
