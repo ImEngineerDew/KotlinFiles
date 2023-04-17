@@ -1,0 +1,25 @@
+type: code
+user-name: imengineerdew
+stage: challenges
+complexity: 3.81
+others:
+  in: 10
+  out: 44
+  totals: 54
+score:
+  initial: 3.31
+  final: 7.12
+  progress: 3.81
+global-rank:
+  initial: 106500
+  final: 25486
+  progress: 81014
+national-rank:
+  initial: 33379
+  final: 25486
+  progress: 7893
+total-time: 3.50
+effort: 1.34
+productivity: 2.91
+date: "2023-03-07 16:20:00Z"
+path: imengineerdew.kt
